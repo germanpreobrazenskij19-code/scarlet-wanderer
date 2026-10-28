@@ -1,0 +1,177 @@
+/* ---------- Цвета и шрифты сайта ---------- */
+:root {
+  --bg: #0a1210;
+  --text: #e6e0d4;
+  --dim: #a9aea3;
+  --red: #e5483b;
+  --line: #2e3e3a;
+  --ground: 30vh; /* высота полосы мха на главном экране */
+  --title-font: "Cinzel", Georgia, serif;
+  --text-font: "Alegreya Sans", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--text-font);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
+.red { color: var(--red); }
+
+/* ---------- 1. Главный экран ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18vh 16px 0;
+  text-align: center;
+}
+
+/* Фон-картинка растягивается на весь экран */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+/* Дождь убран: блок .rain удалён из index.html */
+
+/* Всё, что внутри главного экрана, лежит поверх фона */
+.title, .tagline, .btn, .player { position: relative; z-index: 2; }
+
+.title {
+  margin: 0;
+  font-family: var(--title-font);
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* span по умолчанию строчный, display: block ставит слова друг под другом */
+.title-small { display: block; font-size: clamp(16px, 2.6vw, 30px); letter-spacing: 0.6em; color: var(--red); }
+.title-big { display: block; font-size: clamp(44px, 10vw, 128px); letter-spacing: 0.06em; }
+
+.tagline {
+  font-style: italic;
+  font-size: clamp(17px, 1.9vw, 22px);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.btn {
+  padding: 12px 34px;
+  border: 2px solid var(--text);
+  border-radius: 4px;
+  font-family: var(--title-font);
+  letter-spacing: 0.12em;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.btn:hover { border-color: var(--red); background: rgba(214, 58, 46, 0.3); }
+
+/* Полоса мха внизу экрана */
+.ground {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--ground);
+  object-fit: cover;
+  object-position: top;
+  z-index: 1;
+}
+
+/* Персонаж стоит на мхе, неподвижный статичный кадр */
+.player {
+  position: absolute;
+  left: 8%;
+  bottom: calc(var(--ground) * 0.84);
+  pointer-events: none; /* не мешает нажимать на кнопку */
+}
+
+.hero-img {
+  display: block;
+  height: 16vh;
+  filter: drop-shadow(0 0 12px rgba(255, 244, 220, 0.35));
+}
+
+/* Мотылёк висит рядом с героем */
+.moth {
+  position: absolute;
+  top: -40%;
+  left: -60%;
+  width: 50%;
+}
+
+/* ---------- 2–4. Секции ---------- */
+.section { max-width: 900px; margin: 0 auto; padding: 64px 16px; text-align: center; }
+h2 { margin: 0 0 24px; font-family: var(--title-font); font-size: clamp(30px, 4vw, 44px); }
+
+.about p { color: var(--dim); }
+.platform { font-size: 14px; letter-spacing: 0.2em; }
+
+.steam { display: inline-flex; flex-direction: column; align-items: center; gap: 8px; }
+.steam img { width: 110px; transition: 0.3s; }
+.steam:hover img { transform: scale(1.08); }
+.steam-text { font-family: var(--title-font); font-size: clamp(28px, 5vw, 48px); }
+.steam-today { font-family: var(--title-font); color: var(--red); letter-spacing: 0.2em; }
+
+/* ---------- Галерея: три карточки в ряд, на телефоне — в столбик ---------- */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+/* ---------- Карточка: классы Card с getbootstrap.com, перекрашены под тему сайта ---------- */
+.card {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  background: #0e1a15;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-img-top { display: block; width: 100%; height: 180px; object-fit: cover; }
+
+.card-body { padding: 16px; text-align: left; }
+.card-title { margin: 0 0 8px; font-family: var(--title-font); font-size: 20px; }
+.card-text { margin: 0 0 12px; color: var(--dim); font-size: 16px; }
+
+/* Сплошная кнопка как btn-primary в Bootstrap, но в алом цвете игры */
+.btn-primary {
+  padding: 10px 20px;
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+}
+.btn-primary:hover {
+  border-color: #c73a2f;
+  background: #c73a2f;
+  color: #fff;
+}
+
+@media (max-width: 720px) {
+  .cards { grid-template-columns: 1fr; }
+}
+
+.discord { display: inline-flex; align-items: center; gap: 12px; font-family: var(--title-font); font-size: 28px; }
+.discord img { width: 40px; }
+.socials { display: flex; justify-content: center; gap: 28px; margin-top: 24px; }
+.socials img { width: 28px; opacity: 0.7; transition: 0.3s; }
+.socials img:hover { opacity: 1; }
+
+/* ---------- 5. Подвал ---------- */
+.footer { padding: 32px 16px; text-align: center; border-top: 1px solid var(--line); }
+.mail { width: 20px; vertical-align: middle; margin-right: 6px; }
+.copy { font-size: 14px; color: var(--dim); }
