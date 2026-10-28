@@ -122,6 +122,14 @@ h2 { margin: 0 0 48px; font-family: var(--title-font); font-size: clamp(30px, 4v
 .about p { color: var(--dim); margin-bottom: 48px; }
 .platform { font-size: 14px; letter-spacing: 0.2em; margin: 48px 0; }
 
+/* «About the game» — кадр на весь видимый экран, контент по центру */
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .steam { display: inline-flex; flex-direction: column; align-items: center; gap: 8px; }
 .steam img { width: 110px; transition: 0.3s; }
 .steam:hover img { transform: scale(1.08); }
