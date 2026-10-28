@@ -79,8 +79,6 @@ img { max-width: 100%; }
   transition: 0.3s;
 }
 
-.btn:hover { border-color: var(--red); background: rgba(214, 58, 46, 0.3); }
-
 /* Полоса мха внизу экрана */
 .ground {
   position: absolute;
@@ -217,17 +215,43 @@ h2 { margin: 0 0 48px; font-family: var(--title-font); font-size: clamp(30px, 4v
 .card-title { margin: 0 0 8px; font-family: var(--title-font); font-size: 20px; }
 .card-text { margin: 0 0 12px; color: var(--dim); font-size: 16px; }
 
-/* Сплошная кнопка как btn-primary в Bootstrap, но в алом цвете игры */
-.btn-primary {
+/* ---------- Кнопки: классы Buttons с getbootstrap.com, перекрашены под сеттинг ---------- */
+
+/* Титульник: контурная btn-outline-danger btn-lg — алая, с тёплым свечением */
+.btn-outline-danger {
+  border-width: 1.5px;
+  border-color: var(--red);
+  background: rgba(214, 58, 46, 0.08);
+  color: #ef8378;
+  text-shadow: 0 0 12px rgba(229, 72, 59, 0.4);
+  box-shadow: 0 0 22px rgba(229, 72, 59, 0.15);
+}
+
+.btn-outline-danger:hover {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+  text-shadow: none;
+  box-shadow: 0 0 34px rgba(229, 72, 59, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-lg { padding: 14px 42px; font-size: 19px; }
+
+/* В галерее: сплошная btn-danger — алая, светлеет и светится при наведении */
+.btn-danger {
   padding: 10px 20px;
   border-color: var(--red);
   background: var(--red);
   color: #fff;
 }
-.btn-primary:hover {
-  border-color: #c73a2f;
-  background: #c73a2f;
+
+.btn-danger:hover {
+  border-color: #ff6f61;
+  background: #ff6f61;
   color: #fff;
+  box-shadow: 0 0 24px rgba(229, 72, 59, 0.45);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 720px) {
