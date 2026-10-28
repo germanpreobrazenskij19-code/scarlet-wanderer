@@ -120,6 +120,22 @@ img { max-width: 100%; }
 h2 { margin: 0 0 48px; font-family: var(--title-font); font-size: clamp(30px, 4vw, 44px); }
 
 .about p { color: var(--dim); }
+
+/* Украшения секции «About the game»: мотылёк над заголовком и герой под текстом */
+.about-moth {
+  align-self: center;
+  width: 64px;
+  margin: 0 0 32px;
+  filter: drop-shadow(0 0 10px rgba(255, 244, 220, 0.25));
+}
+
+.about-hero {
+  align-self: center;
+  height: 20vh;
+  margin-top: 56px;
+  filter: drop-shadow(0 0 12px rgba(255, 244, 220, 0.35));
+}
+
 .platform { font-size: 14px; letter-spacing: 0.2em; margin-bottom: 48px; }
 
 /* «About the game» и «Wishlist on Steam» — два отдельных кадра на весь экран */
