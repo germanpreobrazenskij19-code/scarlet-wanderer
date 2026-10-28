@@ -128,6 +128,27 @@ h2 { margin: 0 0 24px; font-family: var(--title-font); font-size: clamp(30px, 4v
 .steam-text { font-family: var(--title-font); font-size: clamp(28px, 5vw, 48px); }
 .steam-today { font-family: var(--title-font); color: var(--red); letter-spacing: 0.2em; }
 
+/* ---------- Лента галереи: размытый кадр из игры на фоне, рваные края сверху и снизу ---------- */
+.gallery-band { position: relative; overflow: hidden; }
+
+.gallery-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(16px) brightness(0.45);
+  transform: scale(1.1); /* чтобы размытые края не просвечивали */
+}
+
+/* Рваные края цвета страницы: в галерее и внизу главного экрана */
+.tear { position: absolute; left: 0; width: 100%; height: 50px; z-index: 1; }
+.tear-top { top: 0; }
+.tear-bottom { bottom: 0; }
+.hero .tear { z-index: 3; } /* рваный край поверх мха */
+
+.gallery-band .section { position: relative; z-index: 2; padding: 100px 16px; }
+
 /* ---------- Галерея: три карточки в ряд, на телефоне — в столбик ---------- */
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
@@ -140,6 +161,7 @@ h2 { margin: 0 0 24px; font-family: var(--title-font); font-size: clamp(30px, 4v
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* тень, чтобы карточки читались на размытом фоне */
 }
 
 .card-img-top { display: block; width: 100%; height: 180px; object-fit: cover; }
