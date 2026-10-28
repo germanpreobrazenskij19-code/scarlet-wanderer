@@ -133,16 +133,7 @@ h2 { margin: 0 0 48px; font-family: var(--title-font); font-size: clamp(30px, 4v
 }
 
 .about-band .section { position: relative; z-index: 2; }
-.about-band .tear { z-index: 3; } /* рваный край поверх мха и фона */
-
-/* Герой стоит на мху слева, как на главном экране */
-.about-player {
-  position: absolute;
-  left: 8%;
-  bottom: calc(var(--ground) * 0.84);
-  z-index: 2;
-  pointer-events: none;
-}
+.about-band .tear { z-index: 3; } /* рваный край поверх фона */
 
 /* Мотылёк парит над заголовком */
 .about-moth {
