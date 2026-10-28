@@ -119,11 +119,12 @@ img { max-width: 100%; }
 .section { max-width: 900px; margin: 0 auto; padding: 120px 16px; text-align: center; }
 h2 { margin: 0 0 48px; font-family: var(--title-font); font-size: clamp(30px, 4vw, 44px); }
 
-.about p { color: var(--dim); margin-bottom: 48px; }
-.platform { font-size: 14px; letter-spacing: 0.2em; margin: 48px 0; }
+.about p { color: var(--dim); }
+.platform { font-size: 14px; letter-spacing: 0.2em; margin-bottom: 48px; }
 
-/* «About the game» — кадр на весь видимый экран, контент по центру */
-.about {
+/* «About the game» и «Wishlist on Steam» — два отдельных кадра на весь экран */
+.about,
+.wishlist {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
