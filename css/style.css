@@ -69,15 +69,7 @@ img { max-width: 100%; }
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
-.btn {
-  padding: 12px 34px;
-  border: 2px solid var(--text);
-  border-radius: 4px;
-  font-family: var(--title-font);
-  letter-spacing: 0.12em;
-  background: rgba(0, 0, 0, 0.3);
-  transition: 0.3s;
-}
+/* Кнопки — только нативные классы Bootstrap (.btn, .btn-lg, .btn-outline-danger, .btn-danger), своих стилей нет */
 
 /* Полоса мха внизу экрана */
 .ground {
@@ -197,62 +189,7 @@ h2 { margin: 0 0 48px; font-family: var(--title-font); font-size: clamp(30px, 4v
 /* ---------- Галерея: три карточки в ряд, на телефоне — в столбик ---------- */
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
-/* ---------- Карточка: классы Card с getbootstrap.com, перекрашены под тему сайта ---------- */
-.card {
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
-  background: #0e1a15;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* тень, чтобы карточки читались на размытом фоне */
-}
-
-.card-img-top { display: block; width: 100%; height: 180px; object-fit: cover; }
-
-.card-body { padding: 16px; text-align: left; }
-.card-title { margin: 0 0 8px; font-family: var(--title-font); font-size: 20px; }
-.card-text { margin: 0 0 12px; color: var(--dim); font-size: 16px; }
-
-/* ---------- Кнопки: классы Buttons с getbootstrap.com, перекрашены под сеттинг ---------- */
-
-/* Титульник: контурная btn-outline-danger btn-lg — алая, с тёплым свечением */
-.btn-outline-danger {
-  border-width: 1.5px;
-  border-color: var(--red);
-  background: rgba(214, 58, 46, 0.08);
-  color: #ef8378;
-  text-shadow: 0 0 12px rgba(229, 72, 59, 0.4);
-  box-shadow: 0 0 22px rgba(229, 72, 59, 0.15);
-}
-
-.btn-outline-danger:hover {
-  border-color: var(--red);
-  background: var(--red);
-  color: #fff;
-  text-shadow: none;
-  box-shadow: 0 0 34px rgba(229, 72, 59, 0.5);
-  transform: translateY(-2px);
-}
-
-.btn-lg { padding: 14px 42px; font-size: 19px; }
-
-/* В галерее: сплошная btn-danger — алая, светлеет и светится при наведении */
-.btn-danger {
-  padding: 10px 20px;
-  border-color: var(--red);
-  background: var(--red);
-  color: #fff;
-}
-
-.btn-danger:hover {
-  border-color: #ff6f61;
-  background: #ff6f61;
-  color: #fff;
-  box-shadow: 0 0 24px rgba(229, 72, 59, 0.45);
-  transform: translateY(-2px);
-}
+/* ---------- Карточки и кнопки — нативный Bootstrap с CDN, своих стилей нет ---------- */
 
 @media (max-width: 720px) {
   .cards { grid-template-columns: 1fr; }
