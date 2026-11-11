@@ -1,152 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-
+<html lang="ru" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scarlet Wanderer</title>
-  <meta name="description" content="Scarlet Wanderer: a PC game about a small wanderer in a scarlet hood.">
-  <link rel="icon" href="img/favicon.svg">
-  <!-- Шрифты: Cinzel для заголовков, Alegreya Sans для текста -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital@0;1&family=Cinzel:wght@600;700&display=swap">
-  <!-- Bootstrap 5.3 с CDN: нативные кнопки и карточки без своего кода -->
+  <title>Scarlet Wanderer — игра о страннике в алом капюшоне</title>
+  <link rel="icon" href="img/favicon-game.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital@0;1&family=Cinzel:wght@600;700&display=swap">
+  <!-- шрифты и бутстрап с CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stili.css">
 </head>
-
 <body>
 
-  <!-- 1. ГЛАВНЫЙ ЭКРАН: фон, название, земля и герой -->
+  <!-- шапка -->
   <header class="hero">
-    <img class="hero-bg" src="img/forest.jpg" alt="">
-
+    <img src="img/hero-shot.jpg" class="hero-foto" alt="">
     <h1 class="title">
-      <span class="title-small">Scarlet</span>
-      <span class="title-big">Wanderer</span>
+      <span class="word1">Scarlet</span>
+      <span class="word2">Wanderer</span>
     </h1>
-    <p class="tagline">
-      The forest is old and full of rain.<br>
-      The hood is <span class="red">red</span>.
+    <p class="slogan">
+      Лес стар и полон дождя.<br>
+      Капюшон — <b class="krasniy">алый</b>.
     </p>
-    <!-- ЗАМЕНИТЬ: ссылка на страницу игры в Steam. Кнопка: btn-outline-danger btn-lg с getbootstrap.com/docs/5.3/components/buttons/ -->
-    <a class="btn btn-outline-danger btn-lg" href="https://store.steampowered.com/search/?term=Scarlet+Wanderer" target="_blank">
-      Wishlist on Steam
+    <a href="https://store.steampowered.com/search/?term=Scarlet+Wanderer" target="_blank" class="btn btn-outline-danger btn-lg">
+      Вишлист в Steam
     </a>
-
-    <img class="ground" src="img/moss.png" alt="">
-
-    <!-- Персонаж и мотылёк. Их двигают CSS-анимации в style.css -->
-    <div class="player">
-      <img class="moth" src="img/moth.svg" alt="">
-      <img class="hero-img" src="img/hero.svg" alt="The wanderer in a red hood">
-    </div>
-
-    <img class="tear tear-bottom" src="img/tear-bottom.svg" alt="">
+    <br>
+    <a href="lore.html" class="ssilka">Лор игры →</a>
   </header>
 
   <main>
-    <!-- 2. ОБ ИГРЕ: отдельный кадр-сцена на весь экран — лес, мох, герой, мотылёк и светлячки -->
-    <section class="about-band">
-      <img class="about-bg" src="img/forest.jpg" alt="">
-      <img class="tear tear-top" src="img/tear-top.svg" alt="">
 
-      <!-- Светлячки: неподвижные тёплые огоньки в воздухе -->
-      <span class="firefly" style="left: 16%; top: 26%;"></span>
-      <span class="firefly" style="left: 80%; top: 20%; width: 4px; height: 4px;"></span>
-      <span class="firefly" style="left: 70%; top: 56%; width: 5px; height: 5px;"></span>
-      <span class="firefly" style="left: 27%; top: 64%; width: 5px; height: 5px;"></span>
-      <span class="firefly" style="left: 50%; top: 16%; width: 4px; height: 4px;"></span>
-
-      <div class="section about">
-        <img class="about-moth" src="img/moth.svg" alt="">
-        <h2>About the game</h2>
-        <!-- ЗАМЕНИТЬ: настоящее описание игры -->
-        <p>
-          A small wanderer in a <span class="red">scarlet hood</span> sets out through an overgrown forest of giant
-          trees.<br>
-          Walk the mossy branches through the rain, meet the creatures that live there,<br>
-          and find out where the path leads.
+    <!-- об игре -->
+    <section class="about">
+      <img src="img/forest.jpg" class="about-foto" alt="">
+      <div class="blok">
+        <h2>Об игре</h2>
+        <p class="about-text">
+          Маленький странник в <b class="krasniy">алом капюшоне</b> отправляется через старый лес,
+          где деревья выше башен, мох покрывает каждую ветку, а дождь не заканчивается.<br>
+          Тропы идут по кронам и через пещеры с огнями, по пути странник встретит светящихся
+          обитателей и сразится мечом с теми, кто выйдет из тени.<br>
+          В самой глубине леса его ждёт огромный Панцирь — и ответ на вопрос,
+          куда все эти годы вела тропа.
         </p>
       </div>
-
-      <img class="tear tear-bottom" src="img/tear-bottom.svg" alt="">
     </section>
 
-    <!-- Вишлист в Steam: отдельный кадр на весь экран -->
-    <section class="section wishlist">
-      <p class="platform">PC <span class="dot">·</span> Windows</p>
-      <a class="steam" href="https://store.steampowered.com/search/?term=Scarlet+Wanderer" target="_blank">
-        <img src="img/icons/steam.svg" alt="">
-        <span class="steam-text">Wishlist on Steam</span>
-        <span class="steam-today">Today →</span>
+
+    <!-- вишлист -->
+    <section class="wishlist">
+      <p class="pc">ПК · Windows</p>
+      <a href="https://store.steampowered.com/search/?term=Scarlet+Wanderer" target="_blank" class="steam">
+        <img src="img/icons/steam.svg" class="steam-ico" alt="">
+        <span class="steam-text">Вишлист в Steam</span>
+        <span class="steam-segodnya">Сегодня →</span>
       </a>
     </section>
 
-    <!-- 3. ГАЛЕРЕЯ: полоса с размытым кадром из игры на фоне и рваными краями сверху и снизу.
-         Внутри — три карточки Card с сайта Bootstrap (getbootstrap.com/docs/5.3/components/card/).
-         Чтобы добавить карточку, скопируйте блок <div class="card">…</div> и положите картинку в img/ -->
-    <section class="gallery-band">
-      <img class="gallery-bg" src="img/shot-01.jpg" alt="">
-      <img class="tear tear-top" src="img/tear-top.svg" alt="">
-      <div class="section">
-        <h2>Gallery</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="img/shot-01.jpg" class="card-img-top object-fit-cover" style="height: 200px" alt="Scarlet Wanderer screenshot: the wanderer, a moth and a beetle">
-          <div class="card-body text-start">
-            <h5 class="card-title">Shot 01</h5>
-            <p class="card-text">The wanderer, a moth and a beetle on a mossy branch of the old forest.</p>
-            <a href="img/shot-01.jpg" class="btn btn-danger" target="_blank">Open full size</a>
+    <!-- галерея (карточки с бутстрапа) -->
+    <section class="gallery">
+      <img src="img/shot-01.jpg" class="gallery-foto" alt="">
+      <div class="blok">
+        <h2>Галерея</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="img/shot-01.jpg" class="card-foto" alt="скриншот игры">
+            <div class="card-body text-start">
+              <h5 class="card-title">Кадр 1</h5>
+              <p class="card-text">Странник, мотылёк и жук на мшистой ветви старого леса.</p>
+              <a href="img/shot-01.jpg" target="_blank" class="btn btn-danger">Открыть полностью</a>
+            </div>
           </div>
-        </div>
 
-        <div class="card">
-          <img src="img/forest.jpg" class="card-img-top object-fit-cover" style="height: 200px" alt="The old forest with giant trees">
-          <div class="card-body text-start">
-            <h5 class="card-title">The old forest</h5>
-            <p class="card-text">Giant trees and quiet paths — the world of Scarlet Wanderer.</p>
-            <a href="img/forest.jpg" class="btn btn-danger" target="_blank">Open full size</a>
+          <div class="card">
+            <img src="img/moth-game.png" class="card-foto" alt="мотылёк из игры">
+            <div class="card-body text-start">
+              <h5 class="card-title">Мотылёк-фонарик</h5>
+              <p class="card-text">Светящийся мотылёк из игры — освещает страннику путь сквозь старый лес.</p>
+              <a href="img/moth-game.png" target="_blank" class="btn btn-danger">Открыть спрайт</a>
+            </div>
           </div>
-        </div>
 
-        <div class="card">
-          <img src="img/moss.png" class="card-img-top object-fit-cover" style="height: 200px" alt="Soft moss covering the forest ground">
-          <div class="card-body text-start">
-            <h5 class="card-title">Mossy grounds</h5>
-            <p class="card-text">Soft moss covers every branch and stone in the forest.</p>
-            <a href="img/moss.png" class="btn btn-danger" target="_blank">Open full size</a>
+          <div class="card">
+            <img src="img/beetle-game.png" class="card-foto" alt="жук из игры">
+            <div class="card-body text-start">
+              <h5 class="card-title">Моховой жук</h5>
+              <p class="card-text">Тихий жук с тлеющими огоньками на панцире — оригинальный спрайт из игры.</p>
+              <a href="img/beetle-game.png" target="_blank" class="btn btn-danger">Открыть спрайт</a>
+            </div>
           </div>
-        </div>
         </div>
       </div>
-      <img class="tear tear-bottom" src="img/tear-bottom.svg" alt="">
     </section>
 
-    <!-- 4. СООБЩЕСТВО: ЗАМЕНИТЬ ссылки на свои -->
-    <section class="section community">
-      <a class="discord" href="https://discord.gg/" target="_blank">
-        <img src="img/icons/discord.svg" alt="">
-        <span>Join us on Discord</span>
+    <!-- сообщество -->
+    <section class="community">
+      <a href="https://discord.gg/" target="_blank" class="discord">
+        <img src="img/icons/discord.svg" class="discord-ico" alt="">
+        <span>Заходите в наш Discord</span>
       </a>
-      <div class="socials">
-        <a href="https://x.com/" target="_blank"><img src="img/icons/x.svg" alt="X"></a>
-        <a href="https://www.youtube.com/" target="_blank"><img src="img/icons/youtube.svg" alt="YouTube"></a>
-        <a href="https://www.tiktok.com/" target="_blank"><img src="img/icons/tiktok.svg" alt="TikTok"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="img/icons/instagram.svg" alt="Instagram"></a>
+      <div class="seti">
+        <a href="https://x.com/" target="_blank"><img src="img/icons/x.svg" class="seti-ico" alt="X"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="img/icons/youtube.svg" class="seti-ico" alt="YouTube"></a>
+        <a href="https://www.tiktok.com/" target="_blank"><img src="img/icons/tiktok.svg" class="seti-ico" alt="TikTok"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="img/icons/instagram.svg" class="seti-ico" alt="Instagram"></a>
       </div>
     </section>
   </main>
 
-  <!-- 5. ПОДВАЛ -->
+  <!-- подвал -->
   <footer class="footer">
     <p>
-      <img class="mail" src="img/icons/mail.svg" alt="">
-      <!-- ЗАМЕНИТЬ: почта для связи -->
+      <img src="img/icons/mail.svg" class="pochta" alt="">
       <span>hello@scarletwanderer.com</span><br>
-      <span class="copy">© 2026 Scarlet Wanderer</span>
+      <span class="copirait">© 2026 Scarlet Wanderer</span>
     </p>
   </footer>
-</body>
 
+</body>
 </html>
