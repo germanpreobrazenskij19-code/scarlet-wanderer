@@ -79,3 +79,23 @@ h2 { font-family: "Cinzel", Georgia, serif; font-size: 44px; margin: 0 0 48px; }
 .ssilka { position: relative; z-index: 2; color: #a9aea3; }
 .geroy { width: 200px; margin: 0 8px; vertical-align: middle; }
 .grib { width: 180px; margin: 0 20px; vertical-align: middle; }
+
+/* телефон */
+@media (max-width: 720px) {
+  .menu { padding: 10px 8px; }
+  .menu a { margin: 0 8px; font-size: 14px; }
+  .hero { padding: 100px 16px 0; }
+  .word1 { font-size: 20px; letter-spacing: 0.3em; }
+  .word2 { font-size: 52px; }
+  .slogan { font-size: 18px; }
+  h2 { font-size: 30px; margin-bottom: 32px; }
+  .pc { margin-bottom: 32px; }
+  .steam-ico { width: 80px; }
+  .steam-text { font-size: 28px; }
+  .blok, .wishlist, .community { padding: 64px 16px; }
+  .about .blok { padding: 100px 16px; }
+  .cards { flex-direction: column; }
+  .geroy { width: 130px; margin: 0 6px; }
+  .grib { width: 130px; margin: 0 12px; }
+  .discord { font-size: 20px; }
+}
